@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;650;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* --- BENTO GRID CUSTOM DESIGN THEME RESETS & COSMETICS --- */
+
+/* App Wrapper & Background adjustments */
+body, html {
+  background-color: #FAF9F6 !important;
+  color: #1A1A1A !important;
+  font-family: var(--font-sans) !important;
+}
+
+/* Shell Viewport Style - Custom Bento Frame Container */
+#mobile_shell_viewport {
+  background-color: #FAF9F6 !important;
+  color: #1A1A1A !important;
+  border-color: #E5E5E1 !important;
+  box-shadow: 0 10px 40px -10px rgba(26,26,26,0.06), 0 1px 3px rgba(26,26,26,0.02) !important;
+  font-family: var(--font-sans) !important;
+}
+
+/* Smooth Scrolling & Font Anti-Aliasing */
+* {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Display and Headings */
+h1, h2, h3, .font-display {
+  font-family: var(--font-display), var(--font-sans) !important;
+  letter-spacing: -0.025em;
+}
+
+/* --- OVERWRITING ACCENT COLORS (ROSE/RED -> PREMIUM BENTO OFF-BLACK/TAUPE) --- */
+
+/* Standard text replacement */
+.text-\[\#e11d48\] {
+  color: #1A1A1A !important;
+}
+
+/* Standard bg replacement */
+.bg-\[\#e11d48\] {
+  background-color: #1A1A1A !important;
+}
+.hover\:bg-[#e11d48]:hover {
+  background-color: #333333 !important;
+}
+
+/* Specific borders replacement */
+.border-\[\#e11d48\] {
+  border-color: #1A1A1A !important;
+}
+
+/* Redefining hover & focus states */
+.hover\:bg-rose-700:hover, .hover\:bg-rose-600:hover {
+  background-color: #2D2D2D !important;
+  border-color: #2D2D2D !important;
+}
+.hover\:text-\[\#e11d48\]:hover {
+  color: #A68B7C !important;
+}
+.focus\:ring-\[\#e11d48\]:focus {
+  --tw-ring-color: #1A1A1A !important;
+  border-color: #1A1A1A !important;
+}
+
+/* peer checkbox helpers */
+.peer:checked ~ .peer-checked\:bg-\[\#e11d48\] {
+  background-color: #1A1A1A !important;
+}
+
+/* --- LAYOUT BOXES, DETECTOR BOXES & CARDS --- */
+
+/* Make all cards pristine crisp white with light warm borders */
+.bg-white {
+  background-color: #FFFFFF !important;
+  border-color: #E5E5E1 !important;
+  box-shadow: 0 1px 2px 0 rgba(26,26,26,0.02), 0 4px 12px 0 rgba(26,26,26,0.03) !important;
+}
+
+/* Redefining borders */
+.border-slate-100, .border-slate-200, .border-slate-150, .border-slate-200\/55, .border-slate-300 {
+  border-color: #E5E5E1 !important;
+}
+
+/* Soft light-gray / ivory elements */
+.bg-slate-50, .bg-slate-100 {
+  background-color: #FAF9F6 !important;
+}
+
+/* Bento standard soft inner gray elements */
+.bg-purple-50, .bg-blue-50, .bg-emerald-50, .bg-pink-50, .bg-rose-50, .bg-slate-100\/55 {
+  background-color: #F1F0EC !important;
+}
+
+/* Rounded Smooth corners following Bento Box design rules */
+.rounded-lg {
+  border-radius: 0.75rem !important; /* 12px */
+}
+.rounded-xl {
+  border-radius: 1rem !important; /* 16px */
+}
+.rounded-2xl {
+  border-radius: 1.5rem !important; /* 24px */
+}
+.rounded-3xl, .rounded-t-3xl, .rounded-b-3xl {
+  border-radius: 2rem !important; /* 32px */
+}
+
+/* Typography styles matching designer layout */
+.tracking-tight {
+  letter-spacing: -0.03em !important;
+}
+.tracking-wider, .tracking-widest {
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+}
+
+/* Dashboard Banner Gradient Replacement (Sleek Warm Off-Black) */
+.bg-gradient-to-r.from-slate-900.to-rose-950, 
+#dashboard_banner {
+  background: #1A1A1A !important;
+  color: #FFFFFF !important;
+}
+#dashboard_banner span {
+  color: #A68B7C !important;
+  font-weight: 700 !important;
+}
+
+/* Badge colors */
+.bg-orange-100 {
+  background-color: #FEF3C7 !important; /* Amber soft */
+  color: #92400E !important;
+}
+.bg-rose-50 {
+  background-color: #F8F1EF !important;
+  color: #724D44 !important;
+}
+
+/* Bottom Navigation Bar alignment */
+#main_bottom_navbar {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  backdrop-filter: blur(16px) !important;
+  border-top: 1px solid #E5E5E1 !important;
+  box-shadow: 0 -4px 14px -4px rgba(26,26,26,0.04) !important;
+}
+
+/* Tab button opacity states matching the spec */
+#main_bottom_navbar button {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+#main_bottom_navbar button.text-\[\#e11d48\] {
+  opacity: 1 !important;
+  color: #1A1A1A !important;
+}
+#main_bottom_navbar button.text-slate-400 {
+  opacity: 0.45 !important;
+  color: #1A1A1A !important;
+}
+#main_bottom_navbar button.text-slate-400:hover {
+  opacity: 1 !important;
+}
+
+/* Center Vender Check-Out button style */
+#tab_checkout_btn {
+  background-color: #1A1A1A !important;
+  color: #FFFFFF !important;
+  opacity: 1 !important;
+  box-shadow: 0 4px 14px rgba(26,26,26,0.15) !important;
+  border: 2px solid #FAF9F6 !important;
+}
+#tab_checkout_btn:hover {
+  background-color: #333333 !important;
+  transform: scale(1.05) !important;
+}
+
+/* Status colors override */
+.text-slate-400 {
+  color: #8C8C88 !important;
+}
+.text-slate-800 {
+  color: #1A1A1A !important;
+}
+
+/* Alert Boxes matching the spec */
+#low_stock_announcement {
+  background-color: #F8F1EF !important;
+  border-color: #E9DAD6 !important;
+}
+#low_stock_announcement h3, 
+#low_stock_announcement p, 
+#low_stock_announcement svg {
+  color: #724D44 !important;
+}
+
+/* Smooth scrollbar styling */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #E5E5E1;
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C4C4C0;
+}

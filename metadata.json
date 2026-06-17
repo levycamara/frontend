@@ -1,0 +1,6 @@
+{
+  "name": "Gestão de Loja & PDV Mobile",
+  "description": "Sistema de gestão de estoque, clientes, vendas, entregas e malas consignadas para lojas do Instagram.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
